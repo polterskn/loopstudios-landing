@@ -20,6 +20,11 @@
     />
     <link rel="stylesheet" href="./css/mobile.css" />
     <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 499px)" />
+    <link
+      rel="stylesheet"
+      href="./css/desktop.css"
+      media="(min-width: 1023px)"
+    />
     <title>Frontend Mentor | Loopstudios landing page</title>
   </head>
   <body>
@@ -36,9 +41,10 @@
             <li><a href="#t">Support</a></li>
           </ul>
         </nav>
-        <h1 id="main__title">
-          Immersive<br />experiences<br />that<br />deliver
-        </h1>
+        <div id="main__title">
+          <span>Immersive<br />experiences<br />that</span>
+          <span> deliver</span>
+        </div>
         <ul id="hidden-ul" class="hover-line">
           <li><a href="#t">About</a></li>
           <li><a href="#t">Careers</a></li>
@@ -57,7 +63,7 @@
             alt="interactive"
           />
           <article id="about__article">
-            <h2>The leader in interactive VR</h2>
+            <span>The leader in interactive VR</span>
             <p>
               Founded in 2011, Loopstudios has been producing world-class
               virtual reality projects for some of the best companies around the
@@ -67,8 +73,12 @@
           </article>
         </section>
         <section id="creations-section">
-          <h2>Our creations</h2>
-          <a href="#t">See all</a>
+          <div id="creations__title">
+            <span>Our creations</span>
+            <a href="#t">See all</a>
+          </div>
+          <span class="hidden-section">Our creations</span>
+          <a class="hidden-section" href="#t">See all</a>
           <div id="set-container">
             <div class="set__item earth">
               <p>Deep<br />earth</p>
@@ -100,7 +110,7 @@
     </main>
     <footer>
       <div id="footer__content">
-        <span class="corp-logo"></span>
+        <span id="footer__logo" class="corp-logo"></span>
         <ul id="footer__ul" class="hover-line">
           <li><a href="#t">About</a></li>
           <li><a href="#t">Careers</a></li>

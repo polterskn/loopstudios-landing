@@ -56,25 +56,13 @@ header {
 }
 
 .content-show {
-  display: none;
+  display: none !important;
 }
 
 #header__content nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-#header__content h1 {
-  margin: 50% 0;
-  padding: 20px;
-  border: 2px solid var(--light-white);
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 3.2rem;
-  font-weight: 300;
-  text-align: justify;
-  text-transform: uppercase;
-  color: var(--light-white);
 }
 
 .corp-logo {
@@ -103,10 +91,6 @@ header {
   display: none;
 }
 
-#nav__ul li {
-  margin: 0 15px;
-}
-
 .nav-show li > a,
 #footer__ul li > a,
 #nav__ul li > a {
@@ -114,9 +98,22 @@ header {
 }
 
 .nav-show li > a:hover,
-#footer__ul li > a:hover,
-#nav__ul li > a:hover {
+#footer__ul li > a:hover {
   color: var(--dark-gray);
+}
+
+#main__title {
+  display: flex;
+  flex-direction: column;
+  margin: 50% 0;
+  padding: 20px;
+  border: 2px solid var(--light-white);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.4rem;
+  font-weight: 300;
+  text-align: justify;
+  text-transform: uppercase;
+  color: var(--light-white);
 }
 
 #hidden-ul {
@@ -136,7 +133,7 @@ header {
 }
 
 .nav-show li {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .hover-line {
@@ -196,7 +193,7 @@ main {
   height: auto;
 }
 
-#main__content h2 {
+#main__content span {
   font-family: "Josefin Sans", sans-serif;
   font-size: 2.8rem;
   font-weight: 300;
@@ -246,6 +243,10 @@ main {
 #creations-section a:hover {
   color: var(--light-white);
   background-color: var(--light-black);
+}
+
+#creations__title {
+  display: none;
 }
 
 #set-container {
@@ -356,7 +357,7 @@ footer {
 }
 
 #footer__ul {
-  margin: 35px 0;
+  margin: 20px 0;
   list-style: none;
 }
 
