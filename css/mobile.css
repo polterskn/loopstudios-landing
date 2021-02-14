@@ -24,6 +24,7 @@ a {
 }
 
 header {
+  position: relative;
   width: 100%;
   height: 650px;
   padding: 35px 20px;
@@ -31,14 +32,25 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: background-color 300ms ease;
 }
 
 .menu-show {
-  background-image: none;
   background-color: var(--light-black);
 }
 
+.menu-show::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  content: " ";
+}
+
 #header__content {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -127,6 +139,47 @@ header {
   margin: 10px 0;
 }
 
+.hover-line {
+  transition: text-decoration 300ms ease-in-out;
+}
+
+.hover-line * {
+  position: relative;
+  display: block;
+}
+
+.hover-line *::before,
+.hover-line *::after {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  content: "";
+  bottom: -10px;
+  background: var(--light-white);
+}
+
+.hover-line *::before {
+  left: 0;
+}
+
+.hover-line *::after {
+  right: 0;
+  background: var(--light-white);
+  transition: width 300ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.hover-line *:hover::before {
+  width: 100%;
+  background: var(--light-white);
+  transition: width 300ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.hover-line *:hover::after {
+  width: 100%;
+  background: transparent;
+  transition: 0ms;
+}
+
 main {
   width: 100%;
   height: auto;
@@ -186,6 +239,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   color: var(--light-black);
+  transition: background-color 300ms ease;
   order: 1;
 }
 
@@ -201,15 +255,33 @@ main {
 }
 
 .set__item {
+  position: relative;
   width: 100%;
   height: 120px;
   margin: 20px 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transition: background-color 300ms ease;
+}
+
+.set__item:hover {
+  cursor: pointer;
+  background-color: rgba(250, 250, 250, 0.7);
+}
+
+.set__item::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: inherit;
+  content: " ";
 }
 
 .set__item p {
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 53px 20px 20px 20px;
@@ -224,6 +296,10 @@ main {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.7) 100%
   );
+}
+
+.set__item p:hover {
+  color: var(--light-black);
 }
 
 .earth {
@@ -292,6 +368,10 @@ footer {
   display: flex;
   justify-content: space-evenly;
   width: 55%;
+}
+
+#social-icon__container span {
+  cursor: pointer;
 }
 
 .footer__icon {
